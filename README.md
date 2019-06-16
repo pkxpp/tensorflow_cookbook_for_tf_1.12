@@ -100,6 +100,8 @@ tf.argmax是tensorflow用numpy的np.argmax实现的，它能给出某个tensor�
 > To train our model, we will have a list of board positions followed by the best optimal response for a number of different boards. We can reduce the amount of boards to train on by considering only board positions that are different with respect to symmetries. The non-identity transformations of a Tic Tac Toe board are a rotation (either direction) by 90 degrees, 180 degrees, 270 degrees, a horizontal reflection, and a vertical reflection.Given this idea, we will use a shortlist of boards with the optimal move, apply two random transformations, and feed that into our neural network to learn.
 意思就是说因为对称性，可以通过旋转和镜像生成许多不一样的数据，而无须都从文件里面读出来
 
+![image](https://github.com/pkxpp/tensorflow_cookbook_for_tf_1.12/blob/master/image/1.png?raw=true)
+
 ## Chapter8 卷积神经网络
 
 ### 8.4 再训练已有的CNN模型
