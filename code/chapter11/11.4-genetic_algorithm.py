@@ -89,6 +89,7 @@ sess.run(init)
 for i in range(generations):
 	crossover_mat = np.ones(shape=[num_children, features])
 	crossover_point = np.random.choice(np.arange(1, features-1, step=1), num_children)
+	
 	for pop_ix in range(num_children):
 		crossover_mat[pop_ix, 0:crossover_point[pop_ix]] = 0.
 	mutation_prob_mat = np.random.uniform(size=[num_children, features])
@@ -107,4 +108,4 @@ plt.plot(truth, label='True Values')
 plt.plot(np.squeeze(best_individual_val), label='Best Individual')
 plt.axis((0, features, -1.25, 1.25))
 plt.legend(loc='upper right')
-plt.show()
+# plt.show()
